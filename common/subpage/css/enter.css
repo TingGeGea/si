@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+body{background:url(../images/enter_02.gif) repeat-x; position:relative;}
+div{
+	width: 400px;
+	background: #dbedfd;
+	height: 213px;
+	position: absolute;
+	left:50%;
+	top:310px;
+	margin-left:-200px;
+	padding-top:4px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+div h1{font-size:24px; color:#566489; height:68px; line-height:68px; padding-left:167px;}
+form p{height:26px; line-height:26px; margin-bottom:8px;}
+form label{width:150px; height:30px; line-height:30px; float:left; text-align:right; padding-right:20px;
+font-size:14px; font-family:"微软雅黑";}
+form input[type="text"]{width:172px; height:26px; border:1px solid #cad8e5;}
+form input[type="password"]{width:172px; height:26px; border:1px solid #cad8e5;}
+form input[type="bot"]{width:50px; height:26px; border:1px solid #cad8e5;}
+input[type="text"]:focus,input[type="password"]:focus{border:#0CF;}
+input[type="submit"]{width:100px; height:30px; border:0; background:#fbfcfe;border-top-left-radius:5px;
+border-top-right-radius:5px; border-bottom-left-radius:5px; border-bottom-right-radius:5px; cursor:pointer;}
+	
+	
+

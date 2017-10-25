@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+body{background:#fafafa;}
+.header_box{width:100%; background:#2a3144;}
+.header{width:1100px; margin:0 auto; text-align:right; height:24px; background:url(../images/pic_06.gif) no-repeat left center; font-size:16px;  color:#fff; line-height:24px;}
+.header a{color:#FFF; line-height:24px; display:inline-block;  font-size:12px;}
+.header a:first-child{padding-left:14px; background:url(../images/pic_03.gif) left center no-repeat;}
+.header a:hover{color:#ff6615;}
+.nav{width:1100px; margin:0 auto; background:url(../images/pic_14.gif) no-repeat left center; height:110px; position:relative; }
+.nav ul{position:absolute; right:0px; top:0px;}
+.nav ul li{float:left; width:65px; display:block; margin-left:40px; heighr:108px; font-size:16px; position:relative; padding-bottom:2px;}
+
+.nav ul li div.nav_2{position:absolute; left:0px; top:89px; width:100px; border-top:1px solid #303135; background:#fff; display:none; z-index:10000;}
+.nav ul li:hover .nav_2{display:block;}
+.nav ul li div.nav_2 a{font-size:12px; color:#323232; display:block; height:35px; border-bottom:1px dashed #ccc; line-height:35px; border-right:1px solid #ccc; border-left:1px solid #ccc; text-indent:16px;}
+.nav ul li div.nav_2 a:hover{color:#ff6312;}
+.nav ul li>a{color:#393a32; display:block; text-align:center; font-family:Microsoft YaHei;  line-height:110px;}
+.nav ul li>a:hover{background:url(../images/pic_11.gif) no-repeat center top; border-bottom:1px solid #17395c; color:#ff6312; }
+.nav ul li a.hover{ display:block; text-align:center; font-family:Microsoft YaHei; color:#ff6312; background:url(../images/pic_11.gif) no-repeat center top; border-bottom:1px solid #17395c;}

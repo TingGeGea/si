@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+.banner{width:100%; background:url(../images/pic_02.jpg) no-repeat center top; height:250px;}
+
+.main_box{width:100%; background:#fafafa; padding-top:22px;}
+.main_box .main{width:1100px; margin:0 auto;}
+.main_box .main h2{font-size:34px; color:#333333; height:66px; line-height:66px; border-bottom:1px solid #dddddd; margin-bottom:25px;}
+.main_box .main ul li{width:306px; float:left; padding-left:25px; border:1px solid #ededed; padding-right:25px; margin-right:10px; height:310px; margin-top:20px; background:#ffffff;}
+.main_box .main ul li:nth-child(3){margin-right:0;}
+.main_box .main ul li:nth-child(6){margin-right:0;}
+.main_box .main ul li:nth-child(9){margin-right:0;}
+.main_box .main ul li h3 a{font-size:18px; color:#ff6601; height:52px; line-height:52px; padding-top:5px;}
+.main_box .main ul li p{width:295px; font-size:12px; color:#333333; line-height:26px; padding-top:12px; position:relative;}
+.main_box .main ul li p a{font-size:12px; color:#ff6601; position:absolute; right:0; bottom:0;}
+.main_box .main ul{margin-bottom:40px;}
+.main_box .main>a{display:inline-block; width:66px; border:1px solid #dddddd; font-size:12px; color:#333333; height:34px; line-height:34px; text-align:center; border-radius:5px; margin-bottom:38px;}
+.main_box .main>a:hover{background:#ff6601; color:#ffffff;}
+

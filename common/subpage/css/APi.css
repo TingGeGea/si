@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background:#fafafa;}
+.banner{ width:100%; background:url(../images/api_02.gif) no-repeat center top; height:250px; margin-bottom:40px;}
+.main{ width:1098px; margin:0 auto; padding-top:42px; border:1px solid #ededed; border-radius:15px; background:#FFF; padding-left:40px;}
+.main .H2{ font-size:30px; color:#ff6601; line-height:39px; text-align:center;}
+.main .P{ width:1018px; font-size:12px; color:#b4b4b4; line-height:51px; border-bottom:1px solid #dddddd; text-align:center; margin-bottom:10px;}
+.main .H2_1{ font-size:24px; color:#ff6601; font-family:"微软雅黑"; line-height:41px;}
+.main .P_1,.main .P_2{ font-size:12px; color:#333; line-height:32px;}
+.main .P_1{ margin-bottom:95px;}
+.main .P_2{ margin-top:43px;}
+.main .P_3{font-size:12px; color:#333; line-height:32px; margin-bottom:61px;}
+
+.img_1{ display:block; margin-bottom:69px;}
+.main .H_2{ text-align:center; font-size:30px; color:#ff6601; }
+.main .P_4{ text-align:center; font-size:16px; color:#758392; line-height:48px; margin-bottom:39px;}
+.main .A{ width:192px; text-align:center; display:block; background:#00a6f2; line-height:62px; margin:0 auto; color:#fff; border-radius:8px; margin-bottom:113px;}
+.main .P_5{ width:1018px; text-align:right; font-size:12px; color:#bfbfbf; background:url(../images/api_15.gif) no-repeat 862px center; margin-bottom:5px;}
+.main .P_5 a{ font-size:12px; color:#bfbfbf;}
+.main .P_6{ line-height:42px;}
+.main .P_6 a{ color:#333; }
+.main .P_6 a:hover{ color:#F90;}
+.main .H_3{ font-size:32px; color:#ff6601; line-height:62px; margin-bottom:49px;}

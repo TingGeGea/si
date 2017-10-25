@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+p{background:#ccc; font:40px/50px/黑体;}
+</style>
+</head>
+
+<body>
+  <p></p>
+  <button>删除第一元素</button>
+  <button>删除最后一个元素</button>
+  <button>开头添加一个"开始"</button>
+  <button>末尾添加一个"结束"</button>
+  <button>逗号换成空格</button>
+  <button>反转数组</button>
+  <button>开头添加第三个元素</button>
+  <button>开头添加第三个元素到第七个元素</button>
+	<script>
+    var arr=["1","2","3","4","5","6","7","8"];
+	var p1=document.getElementsByTagName("p")[0];
+	p1.innerHTML=arr;
+	var btn=document.getElementsByTagName("button");
+	      //匿名函数
+	btn[0].onclick=function(){
+		arr.shift();
+		p1.innerHTML=arr;
+		}
+	btn[1].onclick=function(){
+		arr.pop()
+		p1.innerHTML=arr;
+		};	
+	btn[2].onclick=function(){
+		arr.unshift("开始:");
+		p1.innerHTML=arr;
+		};
+    btn[3].onclick=function(){
+		arr.push("结束:");
+		p1.innerHTML=arr;
+		};
+	btn[4].onclick=function(){
+		p1.innerHTML=arr.join("&nbsp;");
+		};
+	btn[5].onclick=function(){
+		p1.innerHTML=arr.reverse()
+		};
+	btn[6].onclick=function(){
+		arr.unshift(arr[2]);
+		p1.innerHTML=arr;
+		};
+	btn[7].onclick=function(){
+		arr.unshift(arr.slice(2,7));
+		p1.innerHTML=arr;
+		};		
+    </script>
+</body>
+</html>

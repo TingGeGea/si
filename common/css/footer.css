@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+.footer_box{width:100%; background:#2a3144; padding-bottom:39px;}
+.footer{width:1100px; margin:0 auto; padding-top:53px;}
+.footer .left{float:left; width:422px;}
+.footer .middle{float:left; width:320px; margin-right:90px;}
+.footer .right{float:left; width:266px;}
+.footer .left ul{float:left; margin-right:63px;}
+.footer ul li{font-size:18px; color:#e45d5a;}
+.footer .left ul li:first-child{height:29px;}
+.footer .left ul li a{font-size:12px; color:#fff; line-height:30px; height:30px; display:block;}
+
+.footer .middle ul li{float:left;}
+.footer .middle ul li:first-child{width:320px; height:29px;}
+.footer .middle ul li a{ width:53px; font-size:12px; color:#fff; line-height:30px; height:30px; display:block;}
+.footer ul li a:hover{color:#e45d5a;}
+.footer .right h2{font-size:18px; color:#e45d5a; height:29px;}
+.footer .right p{font-size:12px; color:#fff; line-height:30px; }
+.footer .right p:nth-child(2){border-bottom:1px solid #000;}

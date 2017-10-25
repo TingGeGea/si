@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/APi.css" rel="stylesheet" type="text/css" />
+<link href="../css/header.css" rel="stylesheet" type="text/css" />
+<link href="../css/footer.css" rel="stylesheet" type="text/css" />
+<link href="../common/css/qq.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="header_box">
+   		<div class="header">
+		<a href="enter.html">登录</a>
+        /
+        <a href="urse.html">注册</a>
+   </div>
+    </div>
+   <div class="nav">
+   		<ul class="clearfix">
+        	<li><a href="../../homepage/home.html" target="_self">首页</a></li>
+            <li><a href="../../Product Center/ProductCenter.html" target="_self">产品中心</a>
+            <div class="nav_2">
+              <a href="../../Product Center/ProductCenter.html">短信接口</a> 
+               <a href="../../Product Center/SMScenter.html">短信平台</a>
+                <a href="../../Product Center/langsms.html">语音短信</a>
+                 <a href="../../Product Center/ISMS.html">国际短信</a>
+              </div>
+          </li>
+            <li><a href="../../solve/solve_one.html" target="_self">解决方案</a></li>
+            <li><a href="../../download/download.html" target="_self">下载中心</a></li>
+            <li><a href="../../news/news.html" target="_self">新闻中心</a>
+            	<div class="nav_2">
+               <a href="../../news/subpage/company news.html">公司新闻</a> 
+               <a href="../../news/subpage/industry trends.html">行业动态</a>
+               <a href="../../news/subpage/FAQ.html">常见问题</a>
+               <a href="../../news/subpage/technique sharing.html">技术分享</a>
+               <a href="../../news/subpage/Hot recommended.html">热点推荐</a>
+               <a href="../../news/subpage/Dynamic information.html">咨询动态</a>
+              </div>
+            </li>
+            <li><a href="../../about us/index.html" target="_self">关于我们</a>
+            <div class="nav_2">
+       		  <a href="../../about us/index.html">平台简介</a> 
+              <a href="../../about us/scope.html">业务范围</a> 
+              <a href="../../contact/contact.html">联系我们</a> 
+              </div>
+          </li>
+            <li><a href="../../contact/contact.html" target="_self">联系方式</a></li>
+       	</ul>
+   </div>
+
+<div class="banner"></div>
+<div class="main">
+	<h2 class="H2">短信接口api条用注意事项！</h2>
+    <p class="P">发布时间：2016-05-15 14:39:13 | 发布者：shsixun.com | 查看:</p>
+    <h2 class="H2_1">思讯通短信接口注意事项</h2>
+    <p class="P_1">
+    	1.用户可访问 http://www.shsixun.com/ 自助注册账号、充值。
+        
+    </p>
+    <a href="urse.html"><img src="images/api_05.gif" /></a>
+    <p class="P_2">
+        2.在思讯通上无须做任何配置即可直接发送短信，但通过在平台报备短信模板，审核通过后，发送速度将提高到5秒左右。故建议客户申请好模板后再进行测试。<br />
+		3.群发短信将进入人工审核。故测试时尽量用单个号码，以保证接收速度。<br />
+		短信格式要求<br />
+		1.为防止骚扰，默认相同号码一天只能接收4条短信，如果测试期间使用短信较多，可以在后台白名单设置中添加，即可取消限制。<br />
+		2.测试短信时，也请发送正规内容短信，如验证码、订单通知等，千万不要发送无意义的内容：例如 测一下、您好。<br />
+		范例：【思讯通】您的验证码是1234,30秒内有效.若非本人操作请忽略此消息<br />
+		3.短信内容中必须含短信签名格式为：【公司签名】 ，【】中间的文字可以是公司简称、网站简称、注册商标名称，3～10个字符，<br />
+		如 好乐迪，志邦橱柜。不能是无意义的签名，例如【测一下】【试试看】等。
+    </p>
+    
+    <h2 class="H2_1">短信发送API</h2>
+    <p class="P_3">
+		http://sms.shsixun.com/Port/default.ashx?method=SendSms&username=用户名&password =密码&phonelist=13658858&msg=
+<br />【思讯通】测试&SendDatetime= <br /><br />
+
+		USERNAME：在思讯通短信平台注册的用户名<br />
+		PASSWORD：平台登录密码<br />
+		PHONE：目标手机号码，多个手机号码用半角逗号分割<br />
+		CONTENT：发送内容，采用UTF-8 URL ENCODE<br />
+		返回 '0' 视为发送成功，其他内容为错误提示内容
+	</p>
+    
+    <h2 class="H2_1">短信接收API</h2>
+    <p class="P_3">
+    	http://xxx.xxx.xxx/xxx?m=PHONE&c=CONTENT <br />
+		http://xxx.xxx.xxx/xxx：接收短信的URL地址<br />
+		PHONE：发送方手机号码<br />
+		CONTENT：短信内容，采用UTF-8 URL ENCODE<br />
+		返回 '0' 视为接收成功，其他内容为错误提示内容<br /><br />
+
+		提示：须在思讯通管理后台 -->  设置 --> 短信设置中，配置 “短信上行接收地址” ，思讯通才会开始推送回复短信到指定网址
+    </p>
+    
+    <h2 class="H2_1">查询余额API</h2>
+    <p class="P_3">
+    	http://xxx.xxx.xxx/xxx?m=PHONE&c=CONTENT<br />
+		http://xxx.xxx.xxx/xxx：接收短信的URL地址<br />
+		PHONE：发送方手机号码<br />
+		CONTENT：短信内容，采用UTF-8 URL ENCODE<br />
+		返回 '0' 视为接收成功，其他内容为错误提示内容<br /><br />
+
+		提示：须在思讯通管理后台 -->  设置 --> 短信设置中，配置 “短信上行接收地址” ，思讯通才会开始推送回复短信到指定网址
+    </p>
+    
+    <p class="P_3" style="margin-bottom:0;">错误代码表</p>
+    <img src="images/api_08.gif" class="img_1" />
+    
+    <h2 class="H_2">靠谱的思讯通短信，现在就开始</h2>
+    <p class="P_4">靠谱的思讯通短信，现在就开始</p>
+    <a href="#" class="A">免费开通</a>
+    <a href="#"><img src="images/api_11.gif" /></a>
+    <p class="P_5">标签：<a href="#">短信接口api 短信api</a></p>
+    
+    <p class="P_6">
+    	上一篇：<a href="#">短信接口返回值代码及对应解决方案</a><br />
+        下一篇：<a href="#">P2P验证码高效必达 获客成本降低</a><br />
+    </p>
+    
+    <h2 class="H_3">相关链连</h2>
+</div>
+<div class="footer_box">
+    	<div class="footer clearfix">
+        	<div class="left clearfix">
+        	<ul>
+            	<li>产品</li>
+                <li><a href="../../news/footer_news/indent.html">网站接口短信</a></li>
+                <li><a href="../../news/footer_news/indent.html">APP注册验证</a></li>
+               	<li><a href="../../news/footer_news/indent.html">手机游戏短信</a></li>
+               	<li><a href="../../news/footer_news/indent.html">订单通知短信</a></li>
+                <li><a href="../../news/footer_news/indent.html">快递物流应用</a></li>
+                <li><a href="../../news/footer_news/indent.html">会员营销短信</a></li>
+            </ul>
+            <ul>
+            	<li>开发者</li>
+               	<li><a href="#">API接口</a></li>
+                <li><a href="#">支持&帮助</a></li>
+            </ul>
+              <ul>
+            	<li>了解我们</li>
+               	<li><a href="#">网站地图</a></li>
+                <li><a href="#">FQA</a></li>
+            </ul>
+            </div>
+            <div class="middle">
+             <ul>
+            	<li>业务范围</li>
+               	<li><a href="#">青岛</a></li>
+                <li><a href="#">济南</a></li>
+                <li><a href="#">长沙</a></li>
+                <li><a href="#">大连</a></li>
+                <li><a href="#">重庆</a></li>
+                <li><a href="#">广州</a></li>
+                <li><a href="#">北京</a></li>
+                <li><a href="#">上海</a></li>
+                <li><a href="#">深圳</a></li>
+                <li><a href="#">天津</a></li>
+            </ul>
+            </div>
+            <div class="right">
+            	<h2>联系我们</h2>
+                <p>地址：上海浦东新区张杨路268号东<br />
+				明广场2号7层</p>
+                <p>电话：021-31130006</p>
+                <p>邮箱：kf@shsixun.com</p>
+            	<a href="../qq.html"><img src="../images/image_03.gif" width="81" height="23" /></a>
+             </div>
+   		 </div>
+    </div>
+    
+</body>
+</html>

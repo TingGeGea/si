@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+.banner{ width:100%; background:url(../imges/Dynamic_03.gif); margin:0 auto; height:250px;}
+.box{width:100%; background:#fafafa; padding-top:40px; padding-bottom:40px;}
+.main{width:1040px; margin:0 auto; padding-top:43px; background:#fff; border:1px solid #ededed; border-radius:10px; padding-left:40px; padding-right:40px; position:relative;}
+.main h1{font-size:32px; color:#ff6601; height:38px; line-height:38px; padding-left:326px;}
+.main .time{padding-left:380px; font-size:12px; color:#b4b4b4; height:51px; line-height:51px; border-bottom:1px solid #dddddd;}
+.main ul li h2{font-size:26px; color:#ff6601; height:40px; line-height:40px; margin-top:12px;} 
+.main ul li p{font-size:14px; color:#333333; line-height:33px;}
+.main ul li h3{font-size:18px; color:#ff6601;}
+.main ul li p span{font-size:18px; color:#ff6601; font-weight:bold;}
+.main ul li p b a{color:#333333;}
+.main .catenate{height:118px; line-height:118px;}
+.main .catenate img{margin-right:7px;}
+.main .label{ position:absolute; top:1035px; right:40px; font-size:12px; color:#bfbfbf; background:url(../imges/img_22.gif) no-repeat left 4px; text-indent:15px;}
+.main .Lastone a{font-size:14px; color:#333333;height:34px; line-height:34px;}
+.main .Lastone a:hover{color:#30F;}
+.main .Nextarticle a{font-size:14px; color:#333333; height:50px; line-height:50px;}
+.main .Nextarticle a:hover{color:#30F;}
+.main h4{font-size:30px; color:#ff6601; height:53px; line-height:53px; margin-bottom:11px;}
+.main .interfix{border-bottom:1px dashed #bdbdbd; margin-bottom:45px; width:565px; text-indent:12px;}
+.main .interfix a{font-size:14px; color:#333333; height:32px; line-height:32px;}
+.main .interfix span{font-size:12px; color:#9e9e9e; margin-right:30px;}

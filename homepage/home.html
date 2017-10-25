@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/superslide.2.1.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="../common/css/base.css" rel="stylesheet" type="text/css" />
+<link href="../common/css/header.css" rel="stylesheet" type="text/css" />
+<link href="../common/css/footer.css" rel="stylesheet" type="text/css" />
+<link href="../common/css/qq.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">		
+*{margin:0;padding:0;list-style:none;}
+body{font:normal 12px/22px 宋体;width:100%;}
+img{border:0;}
+a{text-decoration:none;color:#333;}
+a:hover{color:#1974A1;}
+/* fullSlide */
+.fullSlide{width:100%;position:relative;height:299px;background:#000; border-bottom:1px solid #8ab9cd;}
+.fullSlide .bd{margin:0 auto;position:relative;z-index:0;overflow:hidden;}
+.fullSlide .bd ul{width:100% !important;}
+.fullSlide .bd li{width:100% !important;height:299px;overflow:hidden;text-align:center;}
+.fullSlide .bd li a{display:block;height:299px;}
+.fullSlide .hd{width:100%;position:absolute;z-index:1;bottom:0;left:0;height:30px;line-height:30px;}
+.fullSlide .hd ul{text-align:center;}
+.fullSlide .hd ul li{cursor:pointer;display:inline-block;*display:inline;zoom:1;width:10px;height:10px; border-radius:5px; margin:5px;overflow:hidden;background:#000;filter:alpha(opacity=50);opacity:0.5;line-height:999px;}
+.fullSlide .hd ul .on{background:#f00;}
+.fullSlide .prev,.fullSlide .next{display:block;position:absolute;z-index:1;top:50%;margin-top:-30px;left:10%;z-index:1;width:40px;height:60px;background:url(images/slider-arrow.png) -126px -137px #000 no-repeat;cursor:pointer;filter:alpha(opacity=50);opacity:0.5;display:none;}
+.fullSlide .next{left:auto;right:10%;background-position:-6px -137px; }
+</style>
+</head>
+<body>
+<div class="header_box">
+   		<div class="header">
+		<a href="../common/subpage/enter.html">登录</a>
+        /
+        <a href="../common/subpage/urse.html">注册</a>
+   </div>
+    </div>
+   <div class="nav">
+   		<ul class="clearfix">
+        	<li><a href="../homepage/home.html" target="_self" class='hover'>首页</a></li>
+            <li><a href="../Product Center/ProductCenter.html" target="_self">产品中心</a>
+            <div class="nav_2">
+              <a href="../Product Center/ProductCenter.html">短信接口</a> 
+               <a href="../Product Center/SMScenter.html">短信平台</a>
+                <a href="../Product Center/langsms.html">语音短信</a>
+                 <a href="../Product Center/ISMS.html">国际短信</a>
+              </div>
+          </li>
+            <li><a href="../solve/solve_one.html" target="_self" >解决方案</a></li>
+            <li><a href="../download/download.html" target="_self">下载中心</a></li>
+            <li><a href="../news/news.html" target="_self">新闻中心</a>
+            	<div class="nav_2">
+               <a href="../news/subpage/company news.html">公司新闻</a> 
+               <a href="../news/subpage/industry trends.html">行业动态</a>
+               <a href="../news/subpage/FAQ.html">常见问题</a>
+               <a href="../news/subpage/technique sharing.html">技术分享</a>
+               <a href="../news/subpage/Hot recommended.html">热点推荐</a>
+               <a href="../news/subpage/Dynamic information.html">咨询动态</a>
+              </div>
+            </li>
+            <li><a href="../about us/index.html" target="_self">关于我们</a>
+            <div class="nav_2">
+       		  <a href="../about us/index.html">平台简介</a> 
+              <a href="../about us/scope.html">业务范围</a> 
+              <a href="../contact/contact.html">联系我们</a> 
+              </div>
+          </li>
+            <li><a href="../contact/contact.html" target="_self">联系方式</a></li>
+       	</ul>
+   </div>
+    <div class="fullSlide">
+	<div class="bd">
+		<ul>
+			<li _src="url(images/Image_3.jpg)" style="background:#E2025E center 0 no-repeat;">
+			<a href="../about us/index.html"></a>
+			</li>
+			<li _src="url(images/Image_1.jpg)" style="background:#DED5A1 center 0 no-repeat;"><a href="../about us/scope.html"></a></li>
+			<li _src="url(images/Image.jpg)" style="background:#B8CED1 center 0 no-repeat;"><a href="../common/subpage/APi.html"></a></li>
+			
+		</ul>
+	</div>
+	<div class="hd"><ul></ul></div>
+	<span class="prev"></span>
+	<span class="next"></span>
+</div><!--fullSlide end-->
+  
+<script type="text/javascript">
+$(".fullSlide").hover(function(){
+    $(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+},
+function(){
+    $(this).find(".prev,.next").fadeOut()
+});
+$(".fullSlide").slide({
+    titCell: ".hd ul",
+    mainCell: ".bd ul",
+    effect: "fold",
+    autoPlay: true,
+    autoPage: true,
+    trigger: "click",
+    startFun: function(i) {
+        var curLi = jQuery(".fullSlide .bd li").eq(i);
+        if ( !! curLi.attr("_src")) {
+            curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+        }
+    }
+});
+</script>
+	<div class="submenu">
+    	<div class="submenu_box clearfix">
+        	<span><a href="../common/subpage/APi.html">全新的短信平台【思讯通】</a></span>
+           <a href="../common/subpage/APi.html"><p>查看详情</p></a>
+        </div>
+    </div>
+    
+    <div class="main clearfix">
+        <ul class="clearfix">
+            <li><a href="../Product Center/ProductCenter.html"><h2 class="h2_one">短信接口</h2><p>5秒极速响应</p></a></li>
+            <li><a href="../Product Center/SMScenter.html"><h2 class="h2_two">短信平台</h2><p>全网覆盖，通道稳定</p></a></li>
+            <li style="margin-right:90px;"><a href="../Product Center/langsms.html"><h2 class="h2_three">语音短信</h2><p>及时可靠，海量并发零堵塞</p></a></li>
+            <li style="margin-right:0;"><a href="../Product Center/ISMS.html"><h2 class="h2_four">国际短信</h2><p>连接全球运营商，助力企业海外市场</p></a></li>
+        </ul>
+    </div>
+    
+    <div class="main_top">
+    	<h2 class="H2">通道优势<span>Advantage</span></h2>
+        <div class="box">
+        	<ul class="clearfix">
+            	<li class="li_1"><h2><a href="#">5秒接收</a></h2><p>智能路由，保证无延时，5秒瞬时接收。</p></li>
+                <li class="li_2"><h2><a href="#">全网发送</a></h2><p>支持移动、联通、电信的全网号码发送方便快捷。</p></li>
+                <li class="li_3"><h2><a href="#">精准高效</a></h2><p>短信到达率≥99.99%，100％的阅 读率超高的反馈率。</p></li>
+                <li class="li_4"><h2><a href="#">自助化接入使用</a></h2><p>人性化设计，接入简单、操作方便，分分钟即可轻松搞定。</p></li>
+                <li class="li_5"><h2><a href="#">多语言、多平台支持</a></h2><p>C#、PHP、 JAVA…全语言覆盖及衔接各种数据库的SDK接口..</p></li>
+                <li class="li_6"><h2><a href="#">安全稳定</a></h2><p>
+安全组规则保护,多用户隔离,防密码破解,防DDoS系统。</p></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main_center">
+    	<h2 class="H2">行业应用<span>Industry application</span><a href="#">MORE</a></h2>
+        <div class="box">
+            <ul class="clearfix">
+                <li  class="li_1">
+                    <h2>网站/app验证</h2>
+                    <p>新品发布<br />会员管理<br />加盟商招募<br />客户关怀<br />售后服务</p>
+                </li>
+                <li  class="li_2">
+                    <h2>互联网/IT行业</h2>
+                    <p>新品发布<br />会员管理<br />加盟商招募<br />客户关怀<br />售后服务</p>
+                </li>
+                <li  class="li_3">
+                    <h2>网游/手游</h2>
+                    <p>新品发布<br />会员管理<br />加盟商招募<br />客户关怀<br />售后服务</p>
+                </li>
+                <li  class="li_4">
+                    <h2>医疗行业</h2>
+                    <p>新品发布<br />会员管理<br />加盟商招募<br />客户关怀<br />售后服务</p>
+                </li>
+                <li  class="li_5">
+                    <h2>金融P2P行业</h2>
+                    <p>新品发布<br />会员管理<br />加盟商招募<br />客户关怀<br />售后服务</p>
+                </li>
+                <li  class="li_6">
+                    <h2>物流快递</h2>
+                    <p>新品发布<br />会员管理<br />加盟商招募<br />客户关怀<br />售后服务</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main_bottom">
+    	<h2 class="H2">新闻中心<span class="hs">NEWS</span><a href="../news/news.html">MORE</a></h2>
+        <div class="box clearfix">
+        	<div class="li_1">
+            	<h2><a href="../news/subpage/Hot recommended.html">热点推荐<span>MORE</span></a></h2>
+            	<ul>
+                `  <li><a href="../solve/subpage/entertainment.html">思讯通使用手册！</a></li>
+                   <li><a href="../solve/subpage/entertainment.html">思讯通为何能实现5-10秒就能收到？</a></li>
+                   <li><a href="../solve/subpage/entertainment.html">高端客户为什么选择思讯通？</a></li>
+                   <li><a href="../solve/subpage/entertainment.html">思讯通短信，我为自己代言！</a></li> 
+                   <li><a href="../solve/subpage/entertainment.html">思讯通优秀，不止于此！</a></li> 
+                   <li><a href="../solve/subpage/entertainment.html">全新的短信平台【思讯通】</a></li> 
+                </ul>
+            </div>
+            <div class="li_2">
+            	<h2><a href="../news/subpage/technique sharing.html">技术分享<span>MORE</span></a></h2>
+            	<ul>
+                `  <li><a href="../about us/subpage/can.html">P2P验证码高效必达 获客成本降低</a></li>
+                   <li><a href="../about us/subpage/can.html">短信接口api调用注意事项！</a></li>
+                   <li><a href="../about us/subpage/can.html">短信接口返回值代码及对应解决方案</a></li>
+                   <li><a href="../about us/subpage/can.html">医疗网站短信接口嵌入，如何高效使用！</a></li> 
+                   <li><a href="../about us/subpage/can.html">955短信通道申请</a></li> 
+                   <li><a href="../about us/subpage/can.html">10690号段归属查询【思讯通】</a></li> 
+                </ul>
+            </div>
+             <div class="li_3">
+            	<h2><a href="../news/subpage/FAQ.html">常见问题<span>MORE</span></a></h2>
+            	<ul>
+                `  <li><a href="../news/footer_news/APP.html">短信百问</a></li>
+                   <li><a href="../news/footer_news/APP.html">如何正确选择网站短信接口服务商？</a></li>
+                   <li><a href="../news/footer_news/APP.html">短信接口和短信平台要注意哪些格式？</a></li>
+                   <li><a href="../news/footer_news/APP.html">思讯通怎么开通？</a></li> 
+                   <li><a href="../news/footer_news/APP.html">短信验证码被刷怎么办？</a></li> 
+                   <li><a href="../news/footer_news/APP.html">如何申请政务106短信平台发送政务短信</a></li> 
+                </ul>
+            </div>
+                <div class="li_4">
+            	<h2><a href="../news/subpage/Dynamic information.html">资讯动态<span>MORE</span></a></h2>
+            	<ul>
+                `  <li><a href="../news/footer_news/APP.html">思讯通短信行业快报（十三期）</a></li>
+                   <li><a href="../news/footer_news/APP.html">医保卡金额变动能发短信告知</a></li>
+                   <li><a href="../news/footer_news/APP.html">玉屏供电营销系统接入短信平台提升服务水平</a></li>
+                   <li><a href="../news/footer_news/APP.html">城北开通短信平台 助力秸秆禁烧</a></li> 
+                   <li><a href="../news/footer_news/APP.html">顺昌农业局借力短信平台防范尼伯特</a></li> 
+                   <li><a href="../news/footer_news/APP.html">思讯通短信行业快报（十二期）</a></li> 
+                </ul>
+            </div>
+            <div class="li_5">
+            	<h2><a href="../news/subpage/industry trends.html">行业动态<span>MORE</span></a></h2>
+            	<ul>
+                `  <li><a href="../news/footer_news/APP.html">双十一如何使用思讯通发送有效的营销短信！</a></li>
+                   <li><a href="../news/footer_news/APP.html">火爆营销靠神马？ 思讯通短信推广打先锋！</a></li>
+                   <li><a href="../news/footer_news/APP.html">思讯通教你发106短信</a></li>
+                   <li><a href="../news/footer_news/APP.html">短信中心号码汇总查询【全国版】</a></li> 
+                   <li><a href="../news/footer_news/APP.html">短信平台的前世今生【成长史】</a></li> 
+                   <li><a href="../news/footer_news/APP.html">短消息类服务接入代码申请表【1066号段】</a></li> 
+                </ul>
+            </div>
+            <div class="li_6">
+            	<h2><a href="../news/subpage/company news.html">公司新闻<span>MORE</span></a></h2>
+            	<ul>
+                `  <li><a href="../news/footer_news/APP.html">川道科技公司账号汇总</a></li>
+                   <li><a href="../news/footer_news/APP.html">2016年六一儿童节放假通知！</a></li>
+                   <li><a href="../news/footer_news/APP.html">520网络情人节放假通知！</a></li>
+                   <li><a href="../news/footer_news/APP.html">移动互联网时代，思讯通短信地位不降反升</a></li> 
+                   <li><a href="../news/footer_news/APP.html">思讯通支持&帮助</a></li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+     <div class="footer_box">
+    	<div class="footer clearfix">
+        	<div class="left clearfix">
+        	<ul>
+            	<li>产品</li>
+                <li><a href="../news/footer_news/indent.html">网站接口短信</a></li>
+                <li><a href="../news/footer_news/indent.html">APP注册验证</a></li>
+               	<li><a href="../news/footer_news/indent.html">手机游戏短信</a></li>
+               	<li><a href="../news/footer_news/indent.html">订单通知短信</a></li>
+                <li><a href="../news/footer_news/indent.html">快递物流应用</a></li>
+                <li><a href="../news/footer_news/indent.html">会员营销短信</a></li>
+            </ul>
+            <ul>
+            	<li>开发者</li>
+               	<li><a href="../common/subpage/APi.html">API接口</a></li>
+                <li><a href="../common/subpage/APi.html">支持&帮助</a></li>
+            </ul>
+              <ul>
+            	<li>了解我们</li>
+               	<li><a href="../contact/contact.html">网站地图</a></li>
+                <li><a href="../news/subpage/FAQ.html">FQA</a></li>
+            </ul>
+            </div>
+            <div class="middle">
+             <ul>
+            	<li>业务范围</li>
+               	            	<li><a href="../about us/subpage/can.html">青岛</a></li>
+                <li><a href="../about us/subpage/can.html">济南</a></li>
+                <li><a href="../about us/subpage/can.html">长沙</a></li>
+                <li><a href="../about us/subpage/can.html">大连</a></li>
+                <li><a href="../about us/subpage/can.html">重庆</a></li>
+                <li><a href="../about us/subpage/can.html">广州</a></li>
+                <li><a href="../about us/subpage/can.html">北京</a></li>
+                <li><a href="../about us/subpage/can.html">上海</a></li>
+                <li><a href="../about us/subpage/can.html">深圳</a></li>
+                <li><a href="../about us/subpage/can.html">天津</a></li>
+            </ul>
+            </div>
+            <div class="right">
+            	<h2>联系我们</h2>
+                <p>地址：上海浦东新区张杨路268号东<br />
+				明广场2号7层</p>
+                <p>电话：021-31130006</p>
+                <p>邮箱：kf@shsixun.com</p>
+            	<a href="../common/qq.html"><img src="../common/images/image_03.gif" width="81" height="23" /></a>
+             </div>
+   		 </div>
+    </div>
+    <div id="qq">
+    	<h3>QQ在线客服<a href="#"><img src="../common/images/pic_1_03.jpg" alt="在线客服" title="关闭在线客服" id='Xue'/></a></h3>
+    	<ul>
+        	<li><a href="../common/qq.html">咨询中心</a></li>
+            <li><a href="../common/qq.html">体验咨询</a></li>
+            <li><a href="../common/qq.html">技术支持</a></li>
+            <li><a href="../common/qq.html">售后一部</a></li>
+            <li><a href="../common/qq.html">售后二部</a></li>
+        </ul>
+        <h2><a href="../common/subpage/urse.html">注册试用</a></h2>
+        <p><span>电话咨询</span>021-31130006</p>
+    </div>
+    <script type="text/javascript">
+		var Xue=document.getElementById("Xue"),qq=document.getElementById("qq"),long=true;
+		Xue.onclick=function(){
+			 if(long){
+				 	qq.style.marginRight='-130px';
+					long=false;
+				 }else{
+					 qq.style.marginRight='0';
+					 long=true;
+					 }
+			}
+	</script>
+</body>
+</html>

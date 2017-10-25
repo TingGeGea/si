@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0;}
+ul,li,p,h1,h2,h3,h4,h5,h6,form,label,aside,section,header,footer,p,span{display:block;}
+ul{list-style:none;}
+a{text-decoration:none; outline:none;}
+img{border:0;}
+.clear{display:block; height:0; line-height:0; clear:both; font-size:0;}
+body{font-family:"宋体";}
+.bgno{background:none;}
+
